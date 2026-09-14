@@ -1,0 +1,38 @@
+[
+  {
+    "_doc_id": "nb-uuid-1",
+    "service_id": "SERVICE-1111111111111111",
+    "service_name": "orders-db",
+    "service_category": "database",
+    "service_type": "DATABASE_SERVICE",
+    "service_sub_type": null,
+    "sections": [
+      {
+        "id": "s1",
+        "state": {
+          "input": {
+            "value": "fetch spans | filter dt.entity.service == \"SERVICE-1111111111111111\""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "_doc_id": "nb-uuid-1",
+    "service_id": "SERVICE-2222222222222222",
+    "service_name": "api.stripe.com",
+    "service_category": "third_party",
+    "service_type": "WEB_REQUEST_SERVICE",
+    "service_sub_type": "WEB_REQUEST_WATCHED",
+    "sections": [
+      {
+        "id": "s2",
+        "state": {
+          "input": {
+            "value": "fetch spans | filter dt.entity.service == \"SERVICE-2222222222222222\""
+          }
+        }
+      }
+    ]
+  }
+]

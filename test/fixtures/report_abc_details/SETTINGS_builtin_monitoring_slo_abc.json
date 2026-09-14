@@ -1,0 +1,17 @@
+[
+  {
+    "_schema_id": "builtin:monitoring.slo",
+    "objectId": "obj-slo-1",
+    "value": {
+      "name": "Checkout availability",
+      "enabled": true,
+      "filter": "type(\"SERVICE\"),entityId(\"SERVICE-4444444444444444\")",
+      "metricExpression": "builtin:service.errors.total.successCount:splitBy()"
+    },
+    "service_id": "SERVICE-4444444444444444",
+    "service_name": "checkout",
+    "service_category": "detected",
+    "service_type": "WEB_REQUEST_SERVICE",
+    "service_sub_type": null
+  }
+]

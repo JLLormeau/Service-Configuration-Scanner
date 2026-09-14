@@ -1,0 +1,119 @@
+{
+  "scanned_at": "2026-09-14T09:00:00+00:00",
+  "tenant": "https://abc.apps.dynatrace.com",
+  "scan_completeness": {
+    "status": "complete",
+    "warnings": []
+  },
+  "services_on_tenant": 48,
+  "services_by_category": {
+    "database": 2,
+    "third_party": 5,
+    "opaque": 1,
+    "detected": 40
+  },
+  "configs_scanned": 25,
+  "affected_config_count": 4,
+  "affected_service_count": 4,
+  "affected_services_by_category": {
+    "database": 1,
+    "third_party": 1,
+    "opaque": 0,
+    "detected": 1,
+    "unresolved": 1
+  },
+  "affected_services": [
+    {
+      "id": "SERVICE-1111111111111111",
+      "name": "orders-db",
+      "category": "database",
+      "entity_type": "SERVICE",
+      "service_type": "DATABASE_SERVICE",
+      "service_sub_type": null
+    },
+    {
+      "id": "SERVICE-2222222222222222",
+      "name": "api.stripe.com",
+      "category": "third_party",
+      "entity_type": "SERVICE",
+      "service_type": "WEB_REQUEST_SERVICE",
+      "service_sub_type": "WEB_REQUEST_WATCHED"
+    },
+    {
+      "id": "SERVICE-4444444444444444",
+      "name": "checkout",
+      "category": "detected",
+      "entity_type": "SERVICE",
+      "service_type": "WEB_REQUEST_SERVICE",
+      "service_sub_type": null
+    },
+    {
+      "id": "SERVICE-5555555555555555",
+      "name": "SERVICE-5555555555555555",
+      "category": "unresolved",
+      "entity_type": null,
+      "service_type": null,
+      "service_sub_type": null
+    }
+  ],
+  "affected_configs": [
+    {
+      "type": "SETTINGS/builtin:monitoring.slo",
+      "id": "obj-slo-1",
+      "name": "Checkout availability",
+      "matches": [
+        {
+          "service_id": "SERVICE-4444444444444444",
+          "service_name": "checkout",
+          "service_category": "detected",
+          "occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "type": "SLO",
+      "id": "slo-app-1",
+      "name": "Orders latency",
+      "matches": [
+        {
+          "service_id": "SERVICE-1111111111111111",
+          "service_name": "orders-db",
+          "service_category": "database",
+          "occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "type": "NOTEBOOK",
+      "id": "nb-uuid-1",
+      "name": "Payments investigation",
+      "matches": [
+        {
+          "service_id": "SERVICE-1111111111111111",
+          "service_name": "orders-db",
+          "service_category": "database",
+          "occurrence_count": 1
+        },
+        {
+          "service_id": "SERVICE-2222222222222222",
+          "service_name": "api.stripe.com",
+          "service_category": "third_party",
+          "occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "type": "DASHBOARD",
+      "id": "dash-uuid-1",
+      "name": "Service overview",
+      "matches": [
+        {
+          "service_id": "SERVICE-5555555555555555",
+          "service_name": "SERVICE-5555555555555555",
+          "service_category": "unresolved",
+          "occurrence_count": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "_doc_id": "dash-uuid-1",
+    "service_id": "SERVICE-5555555555555555",
+    "service_name": "SERVICE-5555555555555555",
+    "service_category": "unresolved",
+    "service_type": null,
+    "service_sub_type": null,
+    "tiles": {
+      "0": {
+        "type": "data",
+        "query": "timeseries avg(dt.service.request.response_time), filter: { dt.entity.service == \"SERVICE-5555555555555555\" }"
+      }
+    }
+  }
+]

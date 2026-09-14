@@ -1,0 +1,26 @@
+{
+  "lookback": "30d",
+  "services_on_tenant": 48,
+  "services_by_category": {
+    "database": 2,
+    "third_party": 5,
+    "opaque": 1,
+    "detected": 40
+  },
+  "third_party_services": [
+    {
+      "id": "SERVICE-2222222222222222",
+      "name": "api.stripe.com",
+      "entity_type": "SERVICE",
+      "service_type": "WEB_REQUEST_SERVICE",
+      "service_sub_type": "WEB_REQUEST_WATCHED"
+    },
+    {
+      "id": "SERVICE-6666666666666666",
+      "name": "s3.amazonaws.com",
+      "entity_type": "SERVICE",
+      "service_type": "WEB_REQUEST_SERVICE",
+      "service_sub_type": "WEB_REQUEST_WATCHED"
+    }
+  ]
+}
